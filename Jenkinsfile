@@ -1,11 +1,11 @@
 pipeline {
-    node('master') {
-    	stage('HelloWorld') {
+    agent any 
+    stages {
+        stage('HelloWorld') {
     	  sh "whoami"
-    	}
-    	stage('Get File Github') {
+        }
+        stage('Get File Github') {
     	  sh "echo 'HAHAHA'"
-    
-    	}
+        }
     }
 }
