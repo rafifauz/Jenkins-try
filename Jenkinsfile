@@ -1,3 +1,4 @@
+env.DOCKER_REGISTRY = 'raxer'
 pipeline {
     agent any 
     stages {
@@ -8,7 +9,7 @@ pipeline {
         }
         stage('Get File Github') { 
             steps {
-                sh "echo 'HAHAHA'"
+                sh "echo $DOCKER_REGISTRY"
             }
         }
     }
